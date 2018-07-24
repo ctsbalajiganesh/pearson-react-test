@@ -1,0 +1,10 @@
+.user-list-section {
+  float: left;
+  width:20%;
+  padding: 30px;
+  border-right: 1px solid #000;
+}
+
+.user-list-section ul li {
+  cursor: pointer;
+}
