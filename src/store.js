@@ -1,11 +1,33 @@
-import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
+import { createStore } from 'redux';
 import rootReducer from './reducers/RootReducer';
 
+const usersList = [
+    {
+        id: 'Alice271',
+        name: 'Alice',
+        role: 'QA',
+    },
+    {
+        id: 'Bob952',
+        name: 'Bob',
+        role: 'Manager',
+    },
+    {
+        id: 'Martin390',
+        name: 'Martin',
+        role: 'Developer',
+    },
+];
 
-export default function configureStore(initialState={}) {
+const initialState = {
+    userData: {
+      usersList,
+    }
+}
+
+export default function configureStore() {
  return createStore(
   rootReducer,
-   applyMiddleware(thunk)
+   initialState
  );
 }

@@ -1,9 +1,29 @@
-export default (state = {}, action) => {
+const usersList = [
+    {
+        id: 'Alice271',
+        name: 'Alice',
+        role: 'QA',
+    },
+    {
+        id: 'Bob952',
+        name: 'Bob',
+        role: 'Manager',
+    },
+    {
+        id: 'Martin390',
+        name: 'Martin',
+        role: 'Developer',
+    },
+];
+
+const initialState = {
+    usersList,
+}
+
+export default (state = initialState, action) => {
     switch (action.type) {
         case 'GET_USERS_ACTION':
-            return {
-                usersList: action.payload
-            }
+            return { ...state }
         case 'ADD_USERS_ACTION':
             const list = state.usersList;
             list.push(action.payload);

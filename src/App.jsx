@@ -8,7 +8,7 @@ import UserList from './components/UserList/UserList';
 
 const { getUsersAction, addUserAction, editUserAction, deleteUserAction } = UserActions;
 
-class App extends Component {
+export class App extends Component {
 
   static defaultProps = {
     userData: {
@@ -128,18 +128,19 @@ class App extends Component {
         <UserList usersList={usersList} loadUser={this.loadUser} />
         
         <div className='user-form-section'>
-          { isEmptyValue && <p>Please select or enter a valid value.</p> }
-          <p></p>
+          <div className='error-message-section'>
+            { isEmptyValue && <p className='error-message'>Please select from list or Enter a valid value.</p> }
+          </div>
           <div className='form-group'>
             <label className='form-label'>Name</label>
-            <input type='text' className='form-field' value={userName} onChange={this.setUserName} />
+            <input type='text' id='userNameField' className='form-field' value={userName} onChange={this.setUserName} />
           </div>
           <div className='form-group'>
             <label className='form-label'>Role</label>
-            <input type='text' className='form-field' value={userRole} onChange={this.setUserRole} />
+            <input type='text' id='userRoleField' className='form-field' value={userRole} onChange={this.setUserRole} />
           </div>
-          <button className='form-btn' onClick={this.deleteUser}>Delete</button>
-          <button className='form-btn' onClick={this.addEditUser}>Submit</button>
+          <button className='form-btn' id='deleteBtn' onClick={this.deleteUser}>Delete</button>
+          <button className='form-btn' id='submitBtn' onClick={this.addEditUser}>Submit</button>
         </div>
         <div className='clearfix'></div>
       </div>

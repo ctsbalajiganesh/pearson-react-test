@@ -1,20 +1,37 @@
 
 .App {
-  width: 70%;
+  width: 100%;
+  max-width: 1024px;
   background-color: #9acded;
   border: 1px solid #000;
-  margin: 0 auto;
+  margin: 20px auto;
+  min-height: 150px;
 }
 
 .App .user-form-section {
-  float: left;
-  width: 74%;
+  float: right;
+  width: 75%;
   text-align: center;
+}
+
+.App .error-message-section {
+  min-height: 50px;
+  text-align: center;
+  border-bottom: 1px solid #000;
+  display: table;
+  width: 100%;
+}
+
+.App .error-message-section .error-message {
+  color: #F00;
+  margin: 0;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .App .user-form-section .form-group {
   width: 90%;
-  padding: 15px;
+  padding: 10px;
 }
 
 .App .user-form-section .form-group .form-label{
@@ -26,7 +43,7 @@
 }
 
 .App .user-form-section .form-btn{
-  margin: 0 30px;
+  margin: 0 30px 10px 30px;
   padding: 5px;
 }
 

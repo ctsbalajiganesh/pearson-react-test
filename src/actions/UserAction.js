@@ -1,26 +1,7 @@
 
-const usersList = [
-    {
-        id: 'Alice271',
-        name: 'Alice',
-        role: 'QA',
-    },
-    {
-        id: 'Bob952',
-        name: 'Bob',
-        role: 'Manager',
-    },
-    {
-        id: 'Martin390',
-        name: 'Martin',
-        role: 'Developer',
-    },
-];
-
 const getUsersAction = () => {
     return {
         type: 'GET_USERS_ACTION',
-        payload: usersList,
     };
 }
 
