@@ -11,3 +11,5 @@ This will load the app in http://localhost:3000
 
 To check for the Unit test cases and their status (Pass/Fail) run the below command from project directory
 > npm test
+
+Press 'a' to re-run all the test cases and to see the result if 'No tests found related to files changed since last commit.' occurs.
