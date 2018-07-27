@@ -1,26 +1,4 @@
-const usersList = [
-    {
-        id: 'Alice271',
-        name: 'Alice',
-        role: 'QA',
-    },
-    {
-        id: 'Bob952',
-        name: 'Bob',
-        role: 'Manager',
-    },
-    {
-        id: 'Martin390',
-        name: 'Martin',
-        role: 'Developer',
-    },
-];
-
-const initialState = {
-    usersList,
-}
-
-export default (state = initialState, action) => {
+export default (state = {}, action) => {
     switch (action.type) {
         case 'GET_USERS_ACTION':
             return { ...state }

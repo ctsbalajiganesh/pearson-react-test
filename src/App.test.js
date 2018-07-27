@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import sinon from 'sinon';
 import { configure, shallow } from 'enzyme';
 import { expect } from 'chai';
